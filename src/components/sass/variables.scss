@@ -1,0 +1,21 @@
+$primary_color: #284b63;
+$secondary_color: #3c6e71;
+
+//backgroung gradient
+$gradients: () !default;
+$gradients: map-merge(
+  (
+    bg: linear-gradient(135deg, $primary_color 0%, $secondary_color 100%),
+  ),
+  $gradients
+);
+
+@mixin bg-gradient($parent, $gradient) {
+  #{$parent} {
+    background: $gradient;
+  }
+}
+
+.flip_H {
+  transform: scale(-1, 1);
+}
